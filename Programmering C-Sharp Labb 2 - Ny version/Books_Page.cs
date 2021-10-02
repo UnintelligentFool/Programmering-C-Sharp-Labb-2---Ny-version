@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Programmering_C_Sharp_Labb_2___Ny_version;
 
 namespace Programmering_C_Sharp_Labb_2_Ny_version {
     class Books_Page {
+
 
 
 
@@ -24,9 +26,116 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
         public static string[] headlineAndCategories = new string[] { "Böcker", "Titel", "Författare", "Pris", "Varunummer" };
 
         //int itemNumbersStartAt = 100;
+
+        //public int itemnumber = 102;
+
+        private static int itemnumber = 0;
+
+        public static int Itemnumber {
+            get { return itemnumber; }
+            set { itemnumber = value; }
+        }
+
+
         public Books_Page() {
 
             Merchandise books_Page = new Merchandise(headlineAndCategories, "Books_Page", listOfBooks/*, itemNumbersStartAt*/);
+
+            WhatBookToCreate(itemnumber);
+
+        }
+
+        public static void WhatBookToCreate(int itemnumber) {
+
+            if (itemnumber == 101) {
+
+                MakeABook(Book1);
+
+            }
+
+            if (itemnumber == 102) {
+
+                MakeABook(Book2);
+
+            }
+
+            if (itemnumber == 103) {
+
+                MakeABook(Book3);
+
+            }
+
+            if (itemnumber == 104) {
+
+                MakeABook(Book4);
+
+            }
+
+            if (itemnumber == 105) {
+
+                MakeABook(Book5);
+
+            }
+
+            if (itemnumber == 106) {
+
+                MakeABook(Book6);
+
+            }
+
+            if (itemnumber == 107) {
+
+                MakeABook(Book7);
+
+            }
+
+        }
+
+        public static void MakeABook(string[] BookValuesArray) {
+
+            //NewItem newBook = new NewItem(Book1[0], Book1[1], Book1[2], Book1[3]);
+            //Console.WriteLine("We just created " + newBook.Title.ToString());
+
+            //NewItem newBook2 = new NewItem();
+            //newBook2.Title = Book2[0];
+            //newBook2.Author = Book2[1];
+            //newBook2.ItemNumber = Book2[2];
+            //newBook2.Price = Book2[3];
+            //Console.WriteLine("We just created " + newBook2.Title.ToString());
+
+            /*
+            for (int i = 0; i < listOfBooks.Count; i++) {
+
+                NewItem newBook = new NewItem();
+                newBook.Title = listOfBooks[i][0];
+                newBook.Author = listOfBooks[i][1];
+                newBook.ItemNumber = listOfBooks[i][2];
+                newBook.Price = listOfBooks[i][3];
+
+                //Console.WriteLine("We just created " + newBook.Title.ToString());
+
+            }
+            */
+
+            NewItem newBook = new NewItem();
+            newBook.Title = BookValuesArray[0];
+            newBook.Author = BookValuesArray[1];
+            newBook.ItemNumber = BookValuesArray[2];
+            newBook.Price = BookValuesArray[3];
+
+            Itemnumber = 0;
+
+            Console.Clear();
+            
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.Write("Tillagd i kundvagnen: ");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine(newBook.Title.ToString() + "\n");
+            Console.ResetColor();
+
+            //Console.ReadKey();
+
+            Program.Books();
 
         }
 

@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Programmering_C_Sharp_Labb_2_Ny_version {
-    class User : Create_New_User {
-
+    //class User : Create_New_User {
+    class User {
 
         private string name;
 
@@ -50,9 +50,22 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
         private static List<string[]> usersShoppingCart;
 
-        public static List<string[]> UsersShoppingCart {//Får inte lov att vara statisk enligt Niklas! .... Dags att fäörändra och skapa problem......
+        public List<string[]> UsersShoppingCart {//Får inte lov att vara statisk enligt Niklas! .... Dags att fäörändra och skapa problem......
             get { return usersShoppingCart; }
             set { usersShoppingCart = value; }
+        }
+
+        //NewItem...
+        //
+        //NewItem...
+        //
+        //NewItem...
+
+        private List<string[]> newCart;
+
+        public List<string[]> NewCart {
+            get { return newCart; }
+            set { newCart = value; }
         }
 
 
@@ -64,7 +77,7 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
         //List<string[]> iHateCarts = new List<string[]>(UsersShoppingCart);//Die cart die
 
-        public User(string username, string password, string name, string lastname, string membershipLevel, List<string[]> shoppingcart) {
+        public User(string username, string password, string name, string lastname, string membershipLevel/*, List<string[]> shoppingcart*/) {
             Name = name;
             Lastname = lastname;
             Username = username;
@@ -73,13 +86,13 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
             
             //UsersShoppingCart = shoppingcart;
             
-            for (int i = 0; i < shoppingcart.Count; ) {
-
-                UsersShoppingCart.Add(shoppingcart[i]);
-
-                shoppingcart.RemoveAt(i);
-
-            }
+//            for (int i = 0; i < shoppingcart.Count; ) {
+//
+//                UsersShoppingCart.Add(shoppingcart[i]);
+//
+//                shoppingcart.RemoveAt(i);
+//
+//            }
 
             /*for (int i = 0; i < shoppingcart.Count; i++) {
 
@@ -105,12 +118,20 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
         }
 
-        public User() {
+        public User(string title, string author, string itemnumber, string price) {
 
-            List<string[]> newCart = UsersShoppingCart;
+            //List<string[]> newCart = UsersShoppingCart;
 
+            string[] itemsToAdd = { title, author, itemnumber, price };
+
+            NewCart.Add(itemsToAdd);
+
+            Console.WriteLine("Added item to cart! " + itemnumber);
+            
 
         }
+        
+        //Death! Death! DEATH! - Theoden, warcry before charging in his last battle
 
         //public static void ShowMeYourCart() {
 

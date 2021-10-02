@@ -87,7 +87,7 @@ using System.Collections.Generic;
 
 namespace Programmering_C_Sharp_Labb_2_Ny_version {
     class Program {
-        
+
         //public Menu menu = new Menu(false);
 
         //bool firstMenu = true;
@@ -118,7 +118,7 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
             get { return userOnline; }
             set { userOnline = value; }
         }
-        
+
 
         static void Main(string[] args) {
 
@@ -137,7 +137,7 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
             //Greeting_User greeting_User = new Greeting_User();
 
             Keystrokes(true, listOfUsers);
-            
+
         }
 
         public static void LoginAndLogout() {
@@ -170,9 +170,9 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
             //Console.WriteLine("Before new User: " + listOfUsers.Count);
             //Console.ReadKey();
 
-            User newCart = new User();
+            //User newCart = new User();
 
-            User newUser = new User(Create_New_User.newUsersUsername, Create_New_User.newUsersPassword, Create_New_User.newUsersFirstName, Create_New_User.newUsersLastName, Create_New_User.newUsersMembershipLevel, shoppingCartList );
+            User newUser = new User(Create_New_User.newUsersUsername, Create_New_User.newUsersPassword, Create_New_User.newUsersFirstName, Create_New_User.newUsersLastName, Create_New_User.newUsersMembershipLevel/*, shoppingCartList*/ );
 
             //Console.WriteLine("After creating new user: " + listOfUsers.Count);
             //Console.ReadKey();
@@ -205,42 +205,8 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
             Books_Page books_Page = new Books_Page();
 
-            /*            foreach (string[] stringArray in Books_Page.listOfBooks) {
-                            if() {
-                            }
-                        } */
 
-//            string usersInput = Console.ReadLine().ToUpper();
-
-            //Linq?
-
-/*            for (int i = 0; i < Books_Page.listOfBooks.Count; i++) {
-
-                if (int.TryParse(usersInput, out _)) {
-
-                    //if (int.Parse(usersInput) == i + 101) {
-                    if (int.Parse(usersInput) == int.Parse(Books_Page.listOfBooks[i][3])) {
-
-                        //Books_Page.listOfBooks[i][3]
-
-                        //Ersätt med att boken läggs i kundvagnen, gör sedan samma med spel och film.
-                        Console.WriteLine("Hej!");
-
-                        Console.Clear();
-
-                        Books();
-
-                    } else {
-
-                        Console.Clear();
-
-                        Books();
-
-                    }
-
-                }
-
-            } */
+            //            string usersInput = Console.ReadLine().ToUpper();
 
             //Console.WriteLine(Books_Page.listOfBooks[1][1]);
 
@@ -334,9 +300,9 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
                     Console.Clear();
 
                     Menu showMenu = new Menu(false);
-                    
+
                     Keystrokes(false, listOfUsers);
-                    
+
                 } else if (usersInput == "3" && firstMenu == false) {
 
                     Console.Clear();
@@ -391,6 +357,34 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
                 }
 
+            } else if (usersInput == "101") {
+
+                Books_Page.WhatBookToCreate(101);
+
+            } else if (usersInput == "102") {
+
+                Books_Page.WhatBookToCreate(102);
+
+            } else if (usersInput == "103") {
+
+                Books_Page.WhatBookToCreate(103);
+
+            } else if (usersInput == "104") {
+
+                Books_Page.WhatBookToCreate(104);
+
+            } else if (usersInput == "105") {
+
+                Books_Page.WhatBookToCreate(105);
+
+            } else if (usersInput == "106") {
+
+                Books_Page.WhatBookToCreate(106);
+
+            } else if (usersInput == "107") {
+
+                Books_Page.WhatBookToCreate(107);
+
             } else {
 
                 //int shoppingcartId = 0;
@@ -407,16 +401,16 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
                             } else {
 
-                                
+
 
                             }
 
                             //Ersätt med att boken läggs i kundvagnen, gör sedan samma med spel och film.
-                            Console.ForegroundColor = ConsoleColor.DarkBlue;
-                            Console.Write("Tillagd i kundvagnen: ");
-                            Console.ForegroundColor = ConsoleColor.DarkGreen;
-                            Console.WriteLine(Books_Page.listOfBooks[i][0] + "\n");
-                            Console.ResetColor();
+                            //                            Console.ForegroundColor = ConsoleColor.DarkBlue;
+                            //                            Console.Write("Tillagd i kundvagnen: ");
+                            //                            Console.ForegroundColor = ConsoleColor.DarkGreen;
+                            //                            Console.WriteLine(Books_Page.listOfBooks[i][0] + "\n");
+                            //                            Console.ResetColor();
 
                             //shoppingCartList.Add(Books_Page.listOfBooks[i]);
 
@@ -424,40 +418,40 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
                             //User.UsersShoppingCart = shoppingCartList;
 
-                            if(isSomeoneOnline == true) {
+                            if (isSomeoneOnline == true) {
 
                                 //User.iHateCarts.Add(Books_Page.listOfBooks[i]);
-                                
-/*/*//*//*///                                User.UsersShoppingCart.Add(Books_Page.listOfBooks[i]);
 
-                                    //shoppingCartList.RemoveAt(0);
+                                /*/*//*//*///                                User.UsersShoppingCart.Add(Books_Page.listOfBooks[i]);
+
+                                //shoppingCartList.RemoveAt(0);
 
                             } else {
 
-                                shoppingCartList.Add(Books_Page.listOfBooks[i]);
+                                //                                shoppingCartList.Add(Books_Page.listOfBooks[i]);
 
                             }
 
-                            if(IsSomeoneOnline == true) { 
+                            /*                            if(IsSomeoneOnline == true) { 
 
-/*/*//*//*/                            for (int a = 0; a < User.UsersShoppingCart.Count; a++) {
+                            //                            for (int a = 0; a < User.UsersShoppingCart.Count; a++) {
 
-                                //Console.WriteLine(shoppingCartList[a][0]);
-/*/*//*//*///                                Console.WriteLine("Online cart: " + User.UsersShoppingCart[a][0]);
+                                                            //Console.WriteLine(shoppingCartList[a][0]);
+                            //                                Console.WriteLine("Online cart: " + User.UsersShoppingCart[a][0]);
 
-                            }
+                                                        }
 
-                            } else { 
+                                                        } else { 
 
-                            for (int a = 0; a < shoppingCartList.Count; a++) {
+                                                        for (int a = 0; a < shoppingCartList.Count; a++) {
 
-                                Console.WriteLine("Offline cart: " + shoppingCartList[a][0]);
-                                //Console.WriteLine(User.UsersShoppingCart[a][0]);
+                                                            Console.WriteLine("Offline cart: " + shoppingCartList[a][0]);
+                                                            //Console.WriteLine(User.UsersShoppingCart[a][0]);
 
-                            }
+                                                        }
 
-                            }
-
+                                                        }
+                            */
                             //shoppingcartId++;
 
                             //Console.Clear();
@@ -482,12 +476,12 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
                             shoppingCartList.Add(Games_Page.listOfGames[i]);
 
-                            //Ersätt med att spelet läggs i kundvagnen, gör sedan samma med bok och film.
-                            Console.ForegroundColor = ConsoleColor.DarkBlue;
-                            Console.Write("Tillagd i kundvagnen: ");
-                            Console.ForegroundColor = ConsoleColor.DarkGreen;
-                            Console.WriteLine(Games_Page.listOfGames[i][0] + "\n");
-                            Console.ResetColor();
+                            //                            //Ersätt med att spelet läggs i kundvagnen, gör sedan samma med bok och film.
+                            //                            Console.ForegroundColor = ConsoleColor.DarkBlue;
+                            //                            Console.Write("Tillagd i kundvagnen: ");
+                            //                            Console.ForegroundColor = ConsoleColor.DarkGreen;
+                            //                            Console.WriteLine(Games_Page.listOfGames[i][0] + "\n");
+                            //                            Console.ResetColor();
 
                             //shoppingcartId++;
 
@@ -514,11 +508,11 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
                             shoppingCartList.Add(Movies_Page.listOfMovies[i]);
 
                             //Ersätt med att filmen läggs i kundvagnen, gör sedan samma med spel och bok.
-                            Console.ForegroundColor = ConsoleColor.DarkBlue;
-                            Console.Write("Tillagd i kundvagnen: ");
-                            Console.ForegroundColor = ConsoleColor.DarkGreen;
-                            Console.WriteLine(Movies_Page.listOfMovies[i][0] + "\n");
-                            Console.ResetColor();
+                            //                            Console.ForegroundColor = ConsoleColor.DarkBlue;
+                            //                            Console.Write("Tillagd i kundvagnen: ");
+                            //                            Console.ForegroundColor = ConsoleColor.DarkGreen;
+                            //                            Console.WriteLine(Movies_Page.listOfMovies[i][0] + "\n");
+                            //                            Console.ResetColor();
 
                             //shoppingcartId++;
 
@@ -542,7 +536,7 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
                 Console.WriteLine(shoppingCartList[0][1].ToString());
                 Console.WriteLine(shoppingCartList[0][2].ToString());
                 Console.WriteLine(shoppingCartList[0][3].ToString());*/
-                
+
                 Keystrokes(firstMenu, listOfUsers);
 
             }
