@@ -126,7 +126,7 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
             Itemnumber = 0;
 
             Console.Clear();
-            
+
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.Write("Tillagd i kundvagnen: ");
             Console.ForegroundColor = ConsoleColor.DarkGreen;

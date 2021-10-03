@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Programmering_C_Sharp_Labb_2___Ny_version;
 
 namespace Programmering_C_Sharp_Labb_2_Ny_version {
-    class NewItem {//NewBook
+    class NewItem : Bridge /*: INewItem*/ {//NewBook
+
+        //public delegate void ProductToCart(string title, string author, string itemnumber, string price);
 
         private string title;//bookTitle
 
@@ -46,9 +49,34 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
         public NewItem() {
 
-            User sendingUserItems = new User(this.Title, this.Author, this.ItemNumber, this.Price);
-            
+            //SendingItem(Title, Author, ItemNumber, Price);
+
+            //Year = 2021;
+
+            ItemsBeingSent = new string[] { Title, Author, ItemNumber, Price};
+
         }
+
+//        public NewItem(ProductToCart productToCart) {
+//
+//            //User sendingUserItems = new User(this.Title, this.Author, this.ItemNumber, this.Price);
+//
+//            productToCart(Title, Author, ItemNumber, Price);
+//
+//        }
+
+//        public void SendingItem(Action<string> title, Action<string> author, Action<string> itemNumber, Action<string> price) {
+//
+//            //User sendingUserItems = new User(this.Title, this.Author, this.ItemNumber, this.Price);
+//
+//            //productToCart(Title, Author, ItemNumber, Price);
+//
+//            title(Title);
+//            author(Author);
+//            itemNumber(ItemNumber);
+//            price(Price);
+//            
+//        }
 
     }
 }

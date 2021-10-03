@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Programmering_C_Sharp_Labb_2___Ny_version;
 
 namespace Programmering_C_Sharp_Labb_2_Ny_version {
     //class User : Create_New_User {
-    class User {
+    class User : Bridge /*: INewItem*/ {
 
         private string name;
 
@@ -61,17 +62,21 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
         //
         //NewItem...
 
-        private List<string[]> newCart;
+        private static List<string[]> newCart;
 
         public List<string[]> NewCart {
             get { return newCart; }
             set { newCart = value; }
         }
 
+        //public string Author { get; set; }
+        //public string ItemNumber { get; set; }
+        //public string Price { get; set; }
+        //public string Title { get; set; }
 
-        public User(string username, string password) {
+        public User(string username/*, string password*/) {
 
-
+            CheckCart();
 
         }
 
@@ -118,16 +123,53 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
         }
 
-        public User(string title, string author, string itemnumber, string price) {
+//        public User(string title, string author, string itemnumber, string price) {
+//
+//            //List<string[]> newCart = UsersShoppingCart;
+//
+//            /*            string[] itemsToAdd = { title, author, itemnumber, price };
+//
+//                        NewCart.Add(itemsToAdd);
+//
+//                        Console.WriteLine("Added item to cart! " + itemnumber);
+//            */
+//
+//            Console.WriteLine("What's happening?");
+//
+//        }
 
-            //List<string[]> newCart = UsersShoppingCart;
+        //public static void ReceivingItems(string Title, string Author, string ItemNumber, string Price) {
+//        public static void ReceivingItems(string Title, string Author, string ItemNumber, string Price) {
+//
+//            Console.WriteLine("Game Over!");
+//
+//        }
 
-            string[] itemsToAdd = { title, author, itemnumber, price };
+        public User() {
+            //ReceivingItems;
 
-            NewCart.Add(itemsToAdd);
+            Console.WriteLine("Work! Work! Work!");
 
-            Console.WriteLine("Added item to cart! " + itemnumber);
-            
+            if (ItemsBeingSent != null) {
+
+                NewCart.Add(ItemsBeingSent);
+                Console.WriteLine("ItemsBeingSent received by User class!");
+                //Console.WriteLine("User is getting a: " + NewCart[(NewCart.Count - 1)]);
+                //ItemsBeingSent = null;
+
+            }
+
+            Console.WriteLine("Noooooo!");
+
+        }
+
+        public static void CheckCart() {
+
+            for (int i = 0; i < User.newCart.Count; i++) {
+
+                Console.WriteLine(User.newCart[i][0]);
+
+            }
 
         }
         

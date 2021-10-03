@@ -81,6 +81,7 @@
 //  Man ska också kunna välja att se priser i minst 3 olika valutor (två ytterligare förutom SEK).
 
 
+using Programmering_C_Sharp_Labb_2___Ny_version;
 using Programmering_C_Sharp_Labb_2_Ny_version;
 using System;
 using System.Collections.Generic;
@@ -210,6 +211,7 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
             //Console.WriteLine(Books_Page.listOfBooks[1][1]);
 
+            User addToNewCart = new User();
 
             Keystrokes(false, listOfUsers);
 
@@ -245,8 +247,10 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
             Menu mainMenu = new Menu(false);
 
-            View_Shopping_Cart view_Shopping_Cart = new View_Shopping_Cart();
+            //View_Shopping_Cart view_Shopping_Cart = new View_Shopping_Cart();
 
+            User.CheckCart();
+            
             Keystrokes(false, listOfUsers);
 
         }

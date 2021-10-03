@@ -12,6 +12,13 @@ using System.Threading.Tasks;
 
 namespace Programmering_C_Sharp_Labb_2_Ny_version {
     class View_Shopping_Cart {
+
+        public View_Shopping_Cart() {
+
+            
+
+        }
+
     }
 }
 
