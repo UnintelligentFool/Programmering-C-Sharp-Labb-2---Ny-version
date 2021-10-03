@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Programmering_C_Sharp_Labb_2___Ny_version;
 
 namespace Programmering_C_Sharp_Labb_2_Ny_version {
-    class NewItem : Bridge /*: INewItem*/ {//NewBook
+    public class NewItem/* : Bridge*/ /*: INewItem*/ {//NewBook
 
         //public delegate void ProductToCart(string title, string author, string itemnumber, string price);
 
@@ -38,12 +38,21 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
             set { price = value; }
         }
 
+        private string[] arrayOfItems = new string[4];
+
+        public string[] ArrayOfItems {
+            get { return arrayOfItems; }
+            set { arrayOfItems = value; }
+        }
+
+
         public NewItem(string title, string author, string itemnumber, string price) {
 
             Title = title;
             Author = author;
             ItemNumber = itemnumber;
             Price = price;
+            ArrayOfItems = new string[] { Title, Author, ItemNumber, Price };
 
         }
 
@@ -53,9 +62,13 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
             //Year = 2021;
 
-            ItemsBeingSent = new string[] { Title, Author, ItemNumber, Price};
-
         }
+
+     //   public NewItem(int irrellevantNumber) {
+     //
+     //       Bridge.ItemsBeingSent = new string[] { Title, Author, ItemNumber, Price };
+     //
+     //   }
 
 //        public NewItem(ProductToCart productToCart) {
 //

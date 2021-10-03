@@ -150,14 +150,16 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
             Console.WriteLine("Work! Work! Work!");
 
-            if (ItemsBeingSent != null) {
+            //if (ItemsBeingSent != null) {
 
-                NewCart.Add(ItemsBeingSent);
+            //Console.WriteLine(ItemsBeingSent[0]);
+            //NewCart.Add(ItemsBeingSent);
+            NewCart.Add(ArrayOfItems);
                 Console.WriteLine("ItemsBeingSent received by User class!");
-                //Console.WriteLine("User is getting a: " + NewCart[(NewCart.Count - 1)]);
+                Console.WriteLine("User is getting a: " + NewCart[(NewCart.Count - 1)]);
                 //ItemsBeingSent = null;
 
-            }
+            //}
 
             Console.WriteLine("Noooooo!");
 

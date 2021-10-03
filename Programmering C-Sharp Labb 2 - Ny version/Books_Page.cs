@@ -122,10 +122,13 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
             newBook.Author = BookValuesArray[1];
             newBook.ItemNumber = BookValuesArray[2];
             newBook.Price = BookValuesArray[3];
+            //NewItem sendValuesOn = new NewItem(1);
 
             Itemnumber = 0;
 
             Console.Clear();
+
+            User addToNewCart = new User();
 
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.Write("Tillagd i kundvagnen: ");

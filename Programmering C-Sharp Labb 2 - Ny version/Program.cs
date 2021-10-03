@@ -211,8 +211,6 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
 
             //Console.WriteLine(Books_Page.listOfBooks[1][1]);
 
-            User addToNewCart = new User();
-
             Keystrokes(false, listOfUsers);
 
         }
