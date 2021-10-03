@@ -17,7 +17,7 @@ namespace Programmering_C_Sharp_Labb_2___Ny_version {
         //    set { year = value; }
         //}
 
-        private string[] itemsBeingSent;
+        private string[] itemsBeingSent = new string[4];
 
         public string[] ItemsBeingSent {
             get { return itemsBeingSent; }
@@ -27,9 +27,9 @@ namespace Programmering_C_Sharp_Labb_2___Ny_version {
 
         public Bridge() {
 
-            ItemsBeingSent = new string[] {Title, Author, ItemNumber, Price};
+            ItemsBeingSent = new string[4] {Title, Author, ItemNumber, Price};
             Console.WriteLine("Bridge built!");
-            Console.WriteLine(ItemsBeingSent[0]);
+            //Console.WriteLine(ItemsBeingSent[0]);
             
             //Year = 2012;
 

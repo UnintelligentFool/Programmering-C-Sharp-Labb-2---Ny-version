@@ -38,7 +38,7 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
             set { price = value; }
         }
 
-        private string[] arrayOfItems = new string[4];
+        private string[] arrayOfItems;
 
         public string[] ArrayOfItems {
             get { return arrayOfItems; }
@@ -52,7 +52,7 @@ namespace Programmering_C_Sharp_Labb_2_Ny_version {
             Author = author;
             ItemNumber = itemnumber;
             Price = price;
-            ArrayOfItems = new string[] { Title, Author, ItemNumber, Price };
+            ArrayOfItems = new string[4] { Title, Author, ItemNumber, Price };
 
         }
 
